@@ -1,0 +1,1 @@
+import{Da as n,Ea as d,Ja as r,Ka as a,Pa as c,ia as o,sa as i}from"./chunk-V6MIZTRZ.js";var p=class t{id=c.required();static \u0275fac=function(e){return new(e||t)};static \u0275cmp=i({type:t,selectors:[["app-product"]],inputs:{id:[1,"id"]},decls:2,vars:1,template:function(e,s){e&1&&(n(0,"h1"),r(1),d()),e&2&&(o(),a("Product ",s.id()))},encapsulation:2})};export{p as Product};

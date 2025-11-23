@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TypeSafeRouterLink } from './type-safe-router-link/type-safe-router-link';
+import { routeHome } from './home/home.route';
+import { routeProduct } from './product/product.route';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css',
+  imports: [RouterOutlet, TypeSafeRouterLink],
 })
 export class App {
-  protected readonly title = signal('angular-router-example');
+  protected readonly routeHome = routeHome;
+  protected readonly routeProduct = routeProduct;
 }
