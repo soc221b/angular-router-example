@@ -28,6 +28,11 @@
           },
           "configurations": {
             "production": {
+              "outputPath": {
+                "base": "docs",
+                "browser": ""
+              },
+              "baseHref": "/angular-router-example/",
               "budgets": [
                 {
                   "type": "initial",
