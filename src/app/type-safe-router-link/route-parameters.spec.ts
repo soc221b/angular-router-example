@@ -1,5 +1,24 @@
-import { RouteParameters } from './route-parameters';
+import { RoutesParameters, RouteParameters } from './route-parameters';
 import { expectType, TypeEqual } from 'ts-expect';
+
+describe('RoutesParameters', () => {
+  test('no routes', () => {
+    expectType<TypeEqual<RoutesParameters<[]>, never>>(true);
+  });
+
+  test('single route', () => {
+    expectType<TypeEqual<RoutesParameters<[{ path: ':id' }]>, { id: string }>>(true);
+  });
+
+  test('multiple route', () => {
+    expectType<
+      TypeEqual<
+        RoutesParameters<[{ path: 'team/:teamId' }, { path: 'user/:userId' }]>,
+        { teamId: string; userId: string }
+      >
+    >(true);
+  });
+});
 
 describe('RouteParameters', () => {
   test('path should be narrowed', () => {

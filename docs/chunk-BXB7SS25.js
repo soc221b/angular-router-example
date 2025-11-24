@@ -1,1 +1,0 @@
-import{Da as m,Ea as n,Ja as a,sa as o}from"./chunk-V6MIZTRZ.js";var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-home"]],decls:2,vars:0,template:function(e,p){e&1&&(m(0,"h1"),a(1,"Home"),n())},encapsulation:2})};export{i as Home};

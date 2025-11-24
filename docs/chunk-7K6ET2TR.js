@@ -1,0 +1,1 @@
+import{Da as o,Ea as i,Ja as a,sa as n}from"./chunk-BG6CGCJ5.js";var f=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-info"]],decls:2,vars:0,template:function(e,p){e&1&&(o(0,"h1"),a(1,"Info"),i())},encapsulation:2})};export{f as Info};

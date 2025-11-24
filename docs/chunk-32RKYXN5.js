@@ -1,0 +1,1 @@
+import{Da as n,Ea as o,Ja as a,sa as i}from"./chunk-BG6CGCJ5.js";var r=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=i({type:t,selectors:[["app-review"]],decls:2,vars:0,template:function(e,p){e&1&&(n(0,"h1"),a(1,"Review"),o())},encapsulation:2})};export{r as Review};

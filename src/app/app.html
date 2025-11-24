@@ -1,11 +1,54 @@
 <ul>
   <li>
-    <app-type-safe-router-link [route]="routeHome" [parameters]="{}"> </app-type-safe-router-link>
+    <app-type-safe-router-link [routes]="[routeHome]" [parameters]="{}">
+    </app-type-safe-router-link>
   </li>
+
   <li>
-    <app-type-safe-router-link [route]="routeProduct" [parameters]="{ id: '1' }">
+    <app-type-safe-router-link [routes]="[routeProduct]" [parameters]="{ id: '1' }">
       Product 1
     </app-type-safe-router-link>
+
+    <ul>
+      <li>
+        <app-type-safe-router-link [routes]="[routeProduct, routeInfo]" [parameters]="{ id: '1' }">
+          Info
+        </app-type-safe-router-link>
+      </li>
+      <li>
+        <app-type-safe-router-link
+          [routes]="[routeProduct, routeReview]"
+          [parameters]="{ id: '1' }"
+        >
+          Review
+        </app-type-safe-router-link>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <app-type-safe-router-link [routes]="[routeTeam]" [parameters]="{ teamId: '1' }">
+      Team 1
+    </app-type-safe-router-link>
+
+    <ul>
+      <li>
+        <app-type-safe-router-link
+          [routes]="[routeTeam, routeUser]"
+          [parameters]="{ teamId: '1', userId: '1' }"
+        >
+          User 1
+        </app-type-safe-router-link>
+      </li>
+      <li>
+        <app-type-safe-router-link
+          [routes]="[routeTeam, routeUser]"
+          [parameters]="{ teamId: '1', userId: '2' }"
+        >
+          User 2
+        </app-type-safe-router-link>
+      </li>
+    </ul>
   </li>
 </ul>
 
