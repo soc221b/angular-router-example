@@ -1,7 +1,8 @@
-import { Route } from '@angular/router';
+import { TypedRoute } from '../../typed-route';
 
+const path = 'review';
 export const routeReview = {
-  path: 'review' as const,
+  path,
   title: 'Review',
   loadComponent: () => import('./review').then((module) => module.Review),
-} satisfies Route;
+} satisfies TypedRoute<typeof path>;
