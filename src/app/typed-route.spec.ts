@@ -17,15 +17,6 @@ class OneInput {
   a = input.required<string>();
 }
 
-@Component({
-  selector: '',
-  template: '',
-})
-class TwoInput {
-  a = input.required<string>();
-  b = input.required<string>();
-}
-
 describe('TypedRoute', () => {
   it('should be type of Route', () => {
     expectType<TypeOf<Route, TypedRoute<string>>>(true);
