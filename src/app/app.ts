@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TypeSafeRouterLink } from './type-safe-router-link/type-safe-router-link';
+import { TypedRouterLink } from './typed-router-link/typed-router-link';
 import { routeHome } from './home/home.route';
 import { routeProduct } from './product/product.route';
 import { routeTeam } from './team/team.route';
@@ -11,7 +11,7 @@ import { routeReview } from './product/review/review.route';
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
-  imports: [RouterOutlet, TypeSafeRouterLink],
+  imports: [RouterOutlet, TypedRouterLink],
 })
 export class App {
   protected readonly routeHome = routeHome;
@@ -27,11 +27,11 @@ import { Route, RouterLink } from '@angular/router';
 import { RoutesParameters } from './route-parameters';
 
 @Component({
-  selector: 'app-type-safe-router-link',
-  templateUrl: './type-safe-router-link.html',
+  selector: 'app-typed-router-link',
+  templateUrl: './typed-router-link.html',
   imports: [RouterLink],
 })
-export class TypeSafeRouterLink<T extends [Route, ...Route[]]> {
+export class TypedRouterLink<T extends [Route, ...Route[]]> {
   readonly routes = input.required<T>();
 
   readonly parameters = input.required<RoutesParameters<T>>();

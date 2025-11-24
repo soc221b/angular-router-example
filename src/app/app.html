@@ -1,52 +1,52 @@
 <ul>
   <li>
-    <app-type-safe-router-link [routes]="[routeHome]" [parameters]="{}">
-    </app-type-safe-router-link>
+    <app-typed-router-link [routes]="[routeHome]" [parameters]="{}">
+    </app-typed-router-link>
   </li>
 
   <li>
-    <app-type-safe-router-link [routes]="[routeProduct]" [parameters]="{ id: '1' }">
+    <app-typed-router-link [routes]="[routeProduct]" [parameters]="{ id: '1' }">
       Product 1
-    </app-type-safe-router-link>
+    </app-typed-router-link>
 
     <ul>
       <li>
-        <app-type-safe-router-link [routes]="[routeProduct, routeInfo]" [parameters]="{ id: '1' }">
+        <app-typed-router-link [routes]="[routeProduct, routeInfo]" [parameters]="{ id: '1' }">
           Info
-        </app-type-safe-router-link>
+        </app-typed-router-link>
       </li>
       <li>
-        <app-type-safe-router-link
+        <app-typed-router-link
           [routes]="[routeProduct, routeReview]"
           [parameters]="{ id: '1' }"
         >
           Review
-        </app-type-safe-router-link>
+        </app-typed-router-link>
       </li>
     </ul>
   </li>
 
   <li>
-    <app-type-safe-router-link [routes]="[routeTeam]" [parameters]="{ teamId: '1' }">
+    <app-typed-router-link [routes]="[routeTeam]" [parameters]="{ teamId: '1' }">
       Team 1
-    </app-type-safe-router-link>
+    </app-typed-router-link>
 
     <ul>
       <li>
-        <app-type-safe-router-link
+        <app-typed-router-link
           [routes]="[routeTeam, routeUser]"
           [parameters]="{ teamId: '1', userId: '1' }"
         >
           User 1
-        </app-type-safe-router-link>
+        </app-typed-router-link>
       </li>
       <li>
-        <app-type-safe-router-link
+        <app-typed-router-link
           [routes]="[routeTeam, routeUser]"
           [parameters]="{ teamId: '1', userId: '2' }"
         >
           User 2
-        </app-type-safe-router-link>
+        </app-typed-router-link>
       </li>
     </ul>
   </li>
@@ -55,6 +55,6 @@
 <router-outlet />
 
 <details>
-  <summary>TypeSafeRouterLink code</summary>
+  <summary>TypedRouterLink code</summary>
   <pre>{{ code }}</pre>
 </details>

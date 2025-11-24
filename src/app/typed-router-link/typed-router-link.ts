@@ -3,11 +3,11 @@ import { Route, RouterLink } from '@angular/router';
 import { RoutesParameters } from './route-parameters';
 
 @Component({
-  selector: 'app-type-safe-router-link',
-  templateUrl: './type-safe-router-link.html',
+  selector: 'app-typed-router-link',
+  templateUrl: './typed-router-link.html',
   imports: [RouterLink],
 })
-export class TypeSafeRouterLink<T extends [Route, ...Route[]]> {
+export class TypedRouterLink<T extends [Route, ...Route[]]> {
   readonly routes = input.required<T>();
 
   readonly parameters = input.required<RoutesParameters<T>>();

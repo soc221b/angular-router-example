@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TypeSafeRouterLink } from './type-safe-router-link';
+import { TypedRouterLink } from './typed-router-link';
 import { inputBinding } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 
@@ -23,18 +23,18 @@ const routeWithParameter: Route = {
   component: WithParameter,
 };
 
-describe('TypeSafeRouterLink', () => {
-  let component: TypeSafeRouterLink<[Route, ...Route[]]>;
-  let fixture: ComponentFixture<TypeSafeRouterLink<[Route, ...Route[]]>>;
+describe('TypedRouterLink', () => {
+  let component: TypedRouterLink<[Route, ...Route[]]>;
+  let fixture: ComponentFixture<TypedRouterLink<[Route, ...Route[]]>>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TypeSafeRouterLink, RouterModule.forRoot([routeBasic, routeWithParameter])],
+      imports: [TypedRouterLink, RouterModule.forRoot([routeBasic, routeWithParameter])],
     }).compileComponents();
   });
 
   it('should render title', async () => {
-    fixture = TestBed.createComponent(TypeSafeRouterLink, {
+    fixture = TestBed.createComponent(TypedRouterLink, {
       bindings: [
         inputBinding('routes', () => [routeBasic]),
         inputBinding('parameters', () => ({})),
@@ -48,7 +48,7 @@ describe('TypeSafeRouterLink', () => {
   });
 
   it('should render correct path', async () => {
-    fixture = TestBed.createComponent(TypeSafeRouterLink, {
+    fixture = TestBed.createComponent(TypedRouterLink, {
       bindings: [
         inputBinding('routes', () => [routeBasic]),
         inputBinding('parameters', () => ({})),
@@ -62,7 +62,7 @@ describe('TypeSafeRouterLink', () => {
   });
 
   it('should render correct parameter', async () => {
-    fixture = TestBed.createComponent(TypeSafeRouterLink, {
+    fixture = TestBed.createComponent(TypedRouterLink, {
       bindings: [
         inputBinding('routes', () => [routeWithParameter]),
         inputBinding('parameters', () => ({ id: '123' })),
@@ -77,7 +77,7 @@ describe('TypeSafeRouterLink', () => {
 
   describe('nested', () => {
     it('should render title', async () => {
-      fixture = TestBed.createComponent(TypeSafeRouterLink, {
+      fixture = TestBed.createComponent(TypedRouterLink, {
         bindings: [
           inputBinding('routes', () => [routeBasic, routeWithParameter]),
           inputBinding('parameters', () => ({})),
@@ -91,7 +91,7 @@ describe('TypeSafeRouterLink', () => {
     });
 
     it('should render correct path', async () => {
-      fixture = TestBed.createComponent(TypeSafeRouterLink, {
+      fixture = TestBed.createComponent(TypedRouterLink, {
         bindings: [
           inputBinding('routes', () => [routeBasic, routeWithParameter]),
           inputBinding('parameters', () => ({ id: 1 })),
